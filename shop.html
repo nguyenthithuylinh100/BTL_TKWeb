@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Menu</title>
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="product-categories">
+          <h2 class="category-title">Product Categories</h2>
+          <div class="category-list">
+            <div class="category-item" data-category="all">ALL</div>
+            <div class="category-item" data-category="coffee">COFFEE</div>
+            <div class="category-item" data-category="drinks">DRINKS</div>
+            <div class="category-item" data-category="food">DESSERT</div>
+          </div>
+        </div>
+
+        <br />
+        <div class="best-seller">
+          <h2 class="category-title">Best Sellers</h2>
+          <div class="products-grid best-seller-products">
+            <div class="product-card">
+              <img
+                src="./images/croissant.png"
+                alt="Croissant"
+                class="product-image"
+              />
+              <h3 class="product-title">Croissant</h3>
+              <p class="product-price">$15.00</p>
+              <button class="add-to-cart" onclick="addToCart(1)">
+                Add to Cart
+              </button>
+            </div>
+            <div class="product-card">
+              <img
+                src="./images/coconut milk coffee.png"
+                alt="Coconut Milk Coffee"
+                class="product-image"
+              />
+              <h3 class="product-title">Coconut Milk Coffee</h3>
+              <p class="product-price">$39.00</p>
+              <button class="add-to-cart" onclick="addToCart(2)">
+                Add to Cart
+              </button>
+            </div>
+            <div class="product-card">
+              <img
+                src="./images/cheesecake.png"
+                alt="Cheese Cake"
+                class="product-image"
+              />
+              <h3 class="product-title">Cheese Cake</h3>
+              <p class="product-price">$22.00</p>
+              <button class="add-to-cart" onclick="addToCart(5)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart" id="cart-toggle">
+          <h2 class="category-title">Cart</h2>
+          <div id="cart-items"></div>
+          <div class="cart-total">
+            Total: $<span id="cart-total">0.00</span>
+          </div>
+          <button class="checkout-btn" id="cart-btn">Go to Cart</button>
+        </div>
+      </aside>
+
+      <main>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="searchProducts(this.value)"
+          />
+          <select class="sort-select" onchange="sortProducts(this.value)">
+            <option value="default">Default sorting</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+
+        <div class="products-grid" id="products-grid"></div>
+
+        <div class="pagination">
+          <button onclick="changePage(1)">1</button>
+          <button onclick="changePage(2)">2</button>
+          <button id="next-page" onclick="nextPage()">→</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="./shop.js"></script>
+  </body>
+</html>
