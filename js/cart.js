@@ -11,7 +11,7 @@ function updateCart() {
         <div class="cart-item">
           <input type="checkbox" class="cart-item-select" 
                  data-id="${item.id}" onchange="updateTotal()" />
-          <img src="../${item.image}" alt="${item.name}" class="cart-item-image" />
+          <img src="${item.image}" alt="${item.name}" class="cart-item-image" />
           <span class="cart-item-title">${item.name}</span>
           <div class="cart-item-quantity">
             <button onclick="changeQuantity(${item.id}, -1)">-</button>
