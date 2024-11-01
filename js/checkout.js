@@ -165,7 +165,7 @@ function loadCheckoutItems() {
 
       // Construct item HTML with image
       itemElement.innerHTML = `
-  <img src="${item.image}" alt="${item.name}" class="checkout-item-image" />
+  <img src="../${item.image}" alt="${item.name}" class="checkout-item-image" />
   <span class="checkout-item-title">${item.name}</span>
   <div class="checkout-item-info">
   <div class="checkout-item-quantity">Quantity: ${item.quantity}</div>
