@@ -322,7 +322,7 @@ function updateCart() {
     .map(
       (item) => `
         <div class="cart-item">
-            <img src="${item.image}" alt="${
+            <img src="../${item.image}" alt="${
         item.name
       }" class="cart-item-image" />
             <span>${item.name} x${item.quantity}</span>
