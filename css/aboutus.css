@@ -1,0 +1,313 @@
+/* Reset các thuộc tính CSS cơ bản */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* our mission */
+
+/* Màu sắc tùy chỉnh */
+.section {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shop-section {
+  margin-top: 5px;
+  margin-bottom: 20px !important;
+  background-color: #dcd7c7;
+  color: #000000 !important;
+  font-family: "Arial", sans-serif;
+}
+
+.mission-section {
+  background-color: #926f45;
+  border: 2px solid #ffffff;
+}
+
+.section-titlecor {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f9d65b;
+  /* Vàng sáng */
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.imgms-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+a.no-underline {
+  color: #ff6f61;
+  /* Đỏ cam cho liên kết */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.no-underline:hover {
+  text-decoration: underline;
+}
+
+/* core values */
+.cor-values {
+  background-color: #835027 !important;
+  /* Xám trung tính */
+  color: #e6e6e6;
+  /* Trắng sáng */
+  font-family: "Arial", sans-serif;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+}
+
+.section-titlecor {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f9d65b;
+  /* Vàng sáng */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4 {
+  position: relative;
+  overflow: hidden;
+  /* Để phần văn bản không bị lấn ra ngoài */
+}
+
+/* Hiệu ứng cho văn bản khi hover */
+.hover-text1,
+.hover-text2,
+.hover-text3,
+.hover-text4 {
+  position: absolute;
+  bottom: 20px;
+  /* Đặt văn bản ở dưới cùng của hình ảnh */
+  left: 10px;
+  /* Đặt văn bản lệch trái một chút */
+  right: 10px;
+  /* Đặt văn bản lệch phải một chút */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Nền mờ để tạo độ tương phản */
+  color: #e6e6e6;
+  /* Trắng sáng cho văn bản */
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  /* Ẩn văn bản ban đầu */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* Hiệu ứng mờ dần */
+  transform: translateY(10px);
+  /* Di chuyển nhẹ lên trên */
+}
+
+.pic1:hover .hover-text1,
+.pic2:hover .hover-text2,
+.pic3:hover .hover-text3,
+.pic4:hover .hover-text4 {
+  opacity: 1;
+  /* Hiện văn bản khi hover */
+  transform: translateY(0);
+  /* Khôi phục vị trí ban đầu */
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Bóng đổ nổi bật */
+}
+
+.img-fluid {
+  width: 100%;
+  aspect-ratio: 21 / 21;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  /* Hiệu ứng cho hình ảnh */
+}
+
+.pic1:hover .img-fluid,
+.pic2:hover .img-fluid,
+.pic3:hover .img-fluid,
+.pic4:hover .img-fluid {
+  transform: scale(1.05);
+  /* Phóng to hình ảnh khi hover */
+}
+
+.no-underline {
+  text-decoration: none;
+  color: #080706 !important;
+  /* Màu chữ không gạch chân */
+  text-align: center;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  /* Hiệu ứng chuyển màu cho liên kết */
+}
+
+.no-underline:hover {
+  color: #ff6f61;
+  /* Chuyển màu liên kết khi hover */
+}
+
+/* Phần đánh giá */
+.feedback-section {
+  padding: 50px 0;
+}
+
+.section-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+  /* Màu chữ tiêu đề */
+}
+
+.feedback-card {
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  /* Bo góc cho thẻ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng cho thẻ */
+  transition: transform 0.3s ease;
+  /* Hiệu ứng thu phóng */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Phóng to thẻ khi hover */
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  /* Chữ đậm */
+}
+
+.rating {
+  color: #ffd700;
+  /* Màu vàng cho đánh giá */
+}
+
+/* Phần form đánh giá */
+.feedback-form-section {
+  padding: 30px;
+  /* Khoảng cách cho phần form */
+  border-radius: 10px;
+  /* Bo góc cho phần form */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng cho phần form */
+}
+
+/* Nút chính */
+.btn-primary {
+  background-color: #1f1f1f;
+  /* Màu nút theo màu chủ đạo */
+  border: none;
+  /* Không viền */
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+  /* Màu nút khi hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 20px;
+    /* Giảm padding cho thiết bị di động */
+  }
+
+  .img-container {
+    height: 150px;
+    /* Chiều cao cho hình ảnh nhỏ hơn trên thiết bị di động */
+  }
+}
+
+#thankYouMessage {
+  color: #45a049;
+  /* Màu chữ cảm ơn */
+  font-size: large;
+}
+
+/* Step */
+.Step {
+  color: #e5d1a5;
+  /* Màu chữ sáng nhẹ */
+}
+
+.step {
+  padding: 20px;
+  color: #ffffff;
+  /* Màu chữ sáng nhẹ */
+  border: 5px solid #b69986;
+  /* Nâu ánh cam, nổi bật hơn */
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  background-color: #835027;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  /* Phóng to khi hover */
+  background-color: #644023;
+  /* Giữ màu tối hơn */
+}
+
+.step img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.step p {
+  padding: 10px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-family: "Cinzel", serif;
+  text-align: justify;
+}
+
+.endlab {
+  font-family: "Cinzel", serif;
+  font-style: italic;
+  color: #f7d6f1;
+  /* Nâu ánh cam, nổi bật hơn */
+  padding: 20px;
+  margin: 0 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+h2 {
+  padding: 30px 0 0 0;
+  color: #e6e6e6 !important;
+  /* Trắng sáng */
+}
+
+.enddd {
+  background: linear-gradient(to right,
+      #dcd7c7,
+      #926f45) !important;
+  /* Nền gradient */
+}

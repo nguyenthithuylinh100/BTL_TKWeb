@@ -1,0 +1,614 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  /* Thay đổi font chữ */
+  color: #333;
+  /* Màu chữ chính */
+}
+
+.backbody {
+  background-color: #926f45;
+}
+
+/* vongf xoay  */
+
+.carousel-item {
+  position: relative;
+  /* Đảm bảo caption có thể hiển thị đúng */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* Đảm bảo ảnh phù hợp với kích thước khung */
+}
+
+.carousel-caption {
+  position: absolute;
+  transform: translateX(-18%);
+  max-width: 35%;
+  color: beige;
+  font-size: 1.5vw;
+  /* Responsive font size */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  /* Add text shadow for better readability */
+}
+
+/* bestseller */
+
+.bestseller {
+  background-color: #dcd7c7;
+  /* Light background color for a clean look */
+  width: 100%;
+  height: auto;
+  /* Allow height to adjust based on content */
+  border: 2px solid #ffd700;
+  /* Gold border for elegance */
+  border-radius: 15px;
+  /* Rounded corners */
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+  padding: 20px;
+  /* Padding for spacing inside the container */
+}
+
+.bestseller-title {
+  font-size: 2.5rem;
+  /* Larger font size for prominence */
+  margin-bottom: 20px;
+  /* Space below the title */
+  color: #8a4b8d;
+  /* Deep purple for elegance */
+  font-family: "Cinzel", serif;
+  /* Use a serif font for a classic look */
+  font-weight: bold;
+  /* Make the title bold */
+  padding: 15px;
+  /* Padding for the title */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white for the title background */
+  border-radius: 10px;
+  /* Rounded corners for the title background */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  /* Light shadow for depth */
+  text-align: center;
+  /* Center the title */
+  letter-spacing: 2px;
+  /* Increase letter spacing for an elegant touch */
+}
+
+.card {
+  background-color: #fff;
+  /* White background for each card */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow for depth */
+  padding: 20px;
+  /* Inner padding for the card */
+  transition: transform 0.2s;
+  /* Smooth scaling effect */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* Lift effect on hover */
+}
+
+.card img {
+  width: 100%;
+  /* Full width for images */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 10px;
+  /* Rounded corners for images */
+}
+
+.card h3 {
+  margin: 10px 0;
+  /* Spacing around the title */
+  font-size: 1.5rem;
+  /* Slightly larger font for the product title */
+  color: #333;
+  /* Consistent text color */
+}
+
+.newfood {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  /* Positioning for the title */
+}
+
+.newfood-title {
+  font-size: 1.8rem;
+  /* Larger font size for the title */
+  margin-bottom: 15px;
+  /* Space below the title */
+  color: #333;
+  /* Dark color for visibility */
+  font-weight: bold;
+  /* Make the title bold */
+}
+
+.newfood img {
+  width: 50%;
+  /* Maintain responsiveness */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 15px;
+  /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Shadow for depth */
+  /* Removed hover effect */
+}
+
+.buynow {
+  display: inline-block;
+  padding: 10px 20px;
+  /* Adjust padding for button */
+  margin-top: 10px;
+  /* Space between image and button */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  /* Make it transparent for a smoother transition */
+  background: linear-gradient(to right, #f8c8639c, #f8a202);
+
+  /* Smooth transitions */
+}
+
+.buynow:hover {
+  background: #f8a202;
+  color: black;
+  /* Change background color on hover */
+  /* Removed scale effect on hover */
+}
+
+@media (max-width: 768px) {
+  .bestseller {
+    padding: 10px;
+    /* Less padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+    /* Smaller title on mobile */
+  }
+}
+
+/* combo */
+
+/* Thiết lập chung với ánh sáng bao quanh */
+.combo {
+  background-color: #dcd7c7;
+  width: 90%;
+  margin-top: 15px;
+  padding: 3%;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.3), 0 0 10px rgba(255, 165, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* animation: pulseLight 3s infinite; */
+  margin-bottom: 10px;
+}
+
+/* Hiệu ứng cho tiêu đề */
+.combo h1 {
+  font-size: 3.5rem;
+  font-family: "Courier New", Courier, monospace;
+  background: linear-gradient(90deg, #886b21, #856131, #e3a95d);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorShift 4s ease-in-out infinite;
+}
+
+/* Hiệu ứng cho hình ảnh */
+.combo-img {
+  width: 100%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 15px;
+}
+
+.combo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Link với hiệu ứng huyền ảo */
+.salemore {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ffba08;
+  padding: 0.75rem 2rem;
+  margin-top: 2rem;
+  border: 2px solid #ffba08;
+  border-radius: 8px;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff006e, #8338ec);
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+}
+
+.salemore:hover {
+  color: white;
+  background-color: #ffba08;
+  transform: scale(1.1);
+}
+
+/* welcome */
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  /* Center video horizontally */
+  align-items: center;
+  /* Center video vertically */
+  width: 100%;
+  height: 90vh;
+  /* Set height to full viewport height */
+  overflow: hidden;
+  border: 7px white;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.welcome video {
+  width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    border: 7px groove rgb(182, 86, 23);
+    width: 100%;
+    height: 40vh;
+  }
+
+  .welcome video {
+    height: auto;
+    /* Adjust to maintain aspect ratio */
+    top: auto;
+    /* Remove top positioning */
+    left: auto;
+    /* Remove left positioning */
+    border: 2px solid black;
+  }
+}
+
+/* LUcky Spin */
+
+/* Giao diện tổng thể cho Luckyspin */
+.Luckyspin {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background-image: url("../images/luckyspin.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.wheel-container {
+  width: 30vw;
+  height: 30vw;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin-top: auto;
+  /* Đẩy vòng quay xuống dưới */
+}
+
+.Luckyspin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  /* Lớp phủ nhẹ giúp ảnh GIF rõ hơn */
+  z-index: -1;
+}
+
+@keyframes backgroundMove {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+
+/* Message box ở giữa vòng quay */
+.message-box {
+  position: absolute;
+  top: 60%;
+  /* Increased from 50% to 60% to lower the box */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ffccd5, #f1e1ff);
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: none;
+  /* Hide message box by default */
+  padding: 20px;
+  /* Padding for the message box */
+}
+
+
+.message-box.show {
+  display: block;
+  /* Hiển thị khi có lớp 'show' */
+  width: 25%;
+  height: auto;
+  padding: 20px;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid #dcd7c7;
+  /* Viền cho vòng quay */
+  background: conic-gradient(#eaeaea 0deg 25.71deg,
+      #a5904c 25.71deg 51.42deg,
+      #eaeaea 51.42deg 77.13deg,
+      #a5904c 77.13deg 102.84deg,
+      #eaeaea 102.84deg 128.55deg,
+      #a5904c 128.55deg 154.26deg,
+      #eaeaea 154.26deg 179.97deg,
+      #a5904c 179.97deg 205.68deg,
+      #eaeaea 205.68deg 231.39deg,
+      #a5904c 231.39deg 257.1deg,
+      #eaeaea 257.1deg 282.81deg,
+      #a5904c 282.81deg 308.52deg,
+      #eaeaea 308.52deg 334.23deg,
+      #a5904c 334.23deg 360deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Hiệu ứng đổ bóng */
+}
+
+.wheel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes shine {
+  from {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Con trỏ chỉ */
+.pointer {
+  position: absolute;
+  top: -25px;
+  /* This can stay the same, but adjust if needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 45px solid #ff99cc;
+  /* Color of the pointer */
+  z-index: 2;
+}
+
+
+/* Nút bấm spin */
+.btn-spin {
+  font-size: 16px;
+
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  position: relative;
+  margin-top: 10px;
+  /* Tạo khoảng cách phía trên nút */
+  top: 10px;
+  margin-bottom: 15px;
+
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.btn-spin:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Message box ở giữa vòng quay */
+  .message-box {
+    position: absolute;
+    top: 60%;
+    /* Increased from 50% to 60% to lower the box */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #ffccd5, #f1e1ff);
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    display: none;
+    /* Hide message box by default */
+    padding: 20px;
+    /* Padding for the message box */
+  }
+
+
+  .message-box.show {
+    display: block;
+    /* Hiển thị khi có lớp 'show' */
+    width: 70%;
+    height: auto;
+    padding: 20px;
+   margin-top: 20px;
+  }
+
+  .wheel-container {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .btn-spin {
+    font-size: 13px;
+    padding: 4px 14px;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    top: 10px;
+    animation: pulse 1.5s infinite;
+  }
+}
+
+/* Thống kê  */
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-top: 5px;
+  border-top: 4px groove #0caae9;
+}
+
+.stat-item {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.stat-item i {
+  font-size: 50px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #777;
+  text-transform: uppercase;
+  margin-top: 5px;
+}

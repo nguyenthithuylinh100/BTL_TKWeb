@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Icon" href="../logo/logo.jpg" type="image/x-icon" />
+    <title>Coffee Menu</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fah.css" />
+  </head>
+
+  <body>
+    <div id="loading-screen">
+      <img
+        src="../logo/[removal.ai]_a78f257d-2111-4884-ad99-e0afdfb1087d-logoloading.png"
+        alt="Loading Logo"
+        class="loading-logo"
+      />
+      <p class="loading-text">Loading<span class="dots">...</span></p>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid d-flex flex-wrap align-items-center">
+        <a class="navbar-brand" href="./home.html">
+          <img
+            src="../logo/logo.jpg"
+            alt="Coffee Shop Logo"
+            class="rounded-pill"
+            style="height: 50px; width: 50px"
+          />
+        </a>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./event.html">Events</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand me-2" href="./cart.html">
+              <img
+                src="../logo/logogiohang.jfif"
+                alt="Cart Icon"
+                class="rounded-pill"
+                style="height: 40px; width: 40px"
+              />
+            </a>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light" type="button">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="containershop">
+      <aside class="sidebar">
+        <div class="product-categories">
+          <h2 class="category-title">Product Categories</h2>
+          <div class="category-list">
+            <div class="category-item" data-category="all">ALL</div>
+            <div class="category-item" data-category="coffee">COFFEE</div>
+            <div class="category-item" data-category="drinks">DRINKS</div>
+            <div class="category-item" data-category="food">DESSERT</div>
+          </div>
+        </div>
+        <br />
+        <div class="best-seller">
+          <h2 class="category-title">Best Sellers</h2>
+          <div class="products-grid best-seller-products">
+            <div class="product-card">
+              <img
+                src="../images/km4.png"
+                alt="Croissant"
+                class="product-image"
+              />
+              <h3 class="product-title">Croissant</h3>
+              <p class="product-price">$15.00</p>
+              <button class="add-to-cart" onclick="addToCart(18)">
+                Add to Cart
+              </button>
+            </div>
+            <div class="product-card">
+              <img
+                src="../images/km3.png"
+                alt="Coconut Milk Coffee"
+                class="product-image"
+              />
+              <h3 class="product-title">Coconut Milk Coffee</h3>
+              <p class="product-price">$39.00</p>
+              <button class="add-to-cart" onclick="addToCart(17)">
+                Add to Cart
+              </button>
+            </div>
+            <div class="product-card">
+              <img
+                src="../images/km5.png"
+                alt="Cheese Cake"
+                class="product-image"
+              />
+              <h3 class="product-title">Cheese Cake</h3>
+              <p class="product-price">$22.00</p>
+              <button class="add-to-cart" onclick="addToCart(9)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart" id="cart-toggle">
+          <h2 class="category-title">Cart</h2>
+          <div id="cart-items"></div>
+          <div class="cart-total">
+            Total: $<span id="cart-total">0.00</span>
+          </div>
+          <button class="checkout-btn" id="cart-btn">Go to Cart</button>
+        </div>
+      </aside>
+
+      <main>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="searchProducts(this.value)"
+          />
+          <select class="sort-select" onchange="sortProducts(this.value)">
+            <option value="default">Default sorting</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+
+        <div class="products-grid" id="products-grid"></div>
+
+        <div class="pagination">
+          <button onclick="changePage(1)">1</button>
+          <button onclick="changePage(2)">2</button>
+          <button id="next-page" onclick="nextPage()">→</button>
+        </div>
+      </main>
+    </div>
+
+    <footer class="py-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-2">
+            <h5>Contact Us</h5>
+            <p>T. 0399955675</p>
+            <p>M. Nttu2521@gmail.com</p>
+          </div>
+          <div class="col-md-4 mb-2">
+            <h5>Address</h5>
+            <p>Tuhaimeo Coffee, 99</p>
+            <p>NCT, HaNoi, VietNam</p>
+          </div>
+          <div class="col-md-4 mb-2">
+            <h5>Opening Hours</h5>
+            <p>Everyday: 09.00 - 22.00</p>
+            <p>Kitchen Closes: 21.30</p>
+          </div>
+        </div>
+
+        <div class="row mt-3 border-top pt-3 text-center">
+          <div class="col-md-12">
+            <img src="../logo/logo.jpg" alt="logo" class="logofooter mb-2" />
+            <div>
+              <a href="#"
+                ><img src="../logo/fb.jfif" alt="Facebook" class="social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../logo/twitter.png"
+                  alt="Twitter"
+                  class="social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../logo/instagram.jfif"
+                  alt="Instagram"
+                  class="social-icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center mt-4">
+          <div class="col-md-12">
+            <h5>Subscribe to our Newsletter</h5>
+            <input
+              type="email"
+              id="emailInput"
+              class="newsletter-input"
+              placeholder="Enter your email"
+            />
+            <button class="newsletter-btn" onclick="showThankYouMessage(event)">
+              Subscribe
+            </button>
+            <div id="thankYouMessageft" class="thank-you-message">
+              Thank you for subscribing!
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center mt-3">
+          <div class="col-md-12">
+            <ul class="list-unstyled d-inline-flex">
+              <li class="mb-2 me-4">
+                <span>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100025175391420"
+                  >
+                    Nguyễn Văn Tú
+                    <img src="../logo/fb.jfif" alt="fb" class="social-icon" />
+                  </a>
+                </span>
+              </li>
+              <li class="mb-2 me-4">
+                <span>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100025666996726"
+                  >
+                    Nguyễn Thị Thùy Linh
+                    <img src="../logo/fb.jfif" alt="fb" class="social-icon" />
+                  </a>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100051635656984"
+                  >
+                    Vũ Thị Thanh Hằng
+                    <img src="../logo/fb.jfif" alt="fb" class="social-icon" />
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-3 footer-bottom text-center">
+          <div class="col-md-12">
+            <p>© 2024 Coffeeee, all rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/shop.js"></script>
+    <script src="../js/btl.js"></script> 
+  </body>
+</html>
