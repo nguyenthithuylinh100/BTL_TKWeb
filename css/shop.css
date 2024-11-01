@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -186,14 +186,14 @@ h2 {
   margin-bottom: 10px;
 }
 
-.best-seller{
+.best-seller {
   width: 100%;
-  height: auto ;
+  height: auto;
 }
 
 .best-seller-products {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -431,5 +431,10 @@ h1 {
   body {
     margin: 0;
     padding: 0;
+  }
+  .category-list {
+    display: inline-block !important;
+    margin: 10px 25px 10px 25px;
+    gap: 10px;
   }
 }
