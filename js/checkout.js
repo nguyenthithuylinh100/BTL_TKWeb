@@ -235,14 +235,12 @@ payButton.onclick = function () {
     const paymentMethod = document.getElementById("payment-method").value;
 
     if (paymentMethod === "cod") {
-      // If the method is Cash on Delivery, show confirmation alert
       alert("You have chosen Cash on Delivery. Your order will be confirmed.");
-      // Automatically close the modal and process payment
       confirmPayment(); // Call confirmPayment function to process payment
     } else {
       // If it's online payment, open modal and create QR code
       document.getElementById("confirmation-modal").style.display = "block";
-      generateQRCode(); // Call function to generate QR code
+      generateQRCode();
     }
   }
 };

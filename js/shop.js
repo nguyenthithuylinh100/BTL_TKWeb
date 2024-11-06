@@ -157,8 +157,8 @@ const products = [
 ];
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-const productsPerPage = 12; // Number of products per page
-let currentPage = 1; // Current page
+const productsPerPage = 12; 
+let currentPage = 1; 
 
 // Update cart function
 function updateCart() {
